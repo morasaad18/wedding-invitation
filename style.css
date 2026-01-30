@@ -1,0 +1,62 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Montserrat',sans-serif; background:#F4EFEA; color:#444; overflow-x:hidden; }
+
+/* Petals & Hearts */
+#petals-container { position:fixed; inset:0; pointer-events:none; z-index:5; }
+.petal { position:absolute; top:-10%; width:12px; height:12px; background: rgba(143,175,154,0.8); border-radius:60% 40% 60% 40%; animation-name:fall,sway; animation-timing-function:linear,ease-in-out; }
+@keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
+@keyframes sway { 50% { margin-left: 40px; } }
+
+.heart { position:absolute; width:12px; height:12px; background:#FF6B81; transform:rotate(45deg); opacity:0.7; border-radius:3px 0 0 3px; animation:heartFloat 5s linear infinite; }
+.heart::before, .heart::after { content:""; position:absolute; width:12px;height:12px; background:#FF6B81; border-radius:50%; }
+.heart::before { top:-6px; left:0; }
+.heart::after { left:6px; top:0; }
+@keyframes heartFloat { 0%{transform:translateY(0) rotate(45deg);opacity:0.7;} 50%{opacity:0.9;} 100%{transform:translateY(-300px) rotate(45deg);opacity:0;} }
+
+/* Card */
+#card { position:fixed; inset:0; background:linear-gradient(135deg,#5F7A6A,#8FAF9A); display:flex; justify-content:center; align-items:center; z-index:1000; transition:opacity 1.2s ease; }
+.card-inner { background:white; padding:80px 60px; border-radius:24px; text-align:center; cursor:pointer; animation: float 3s ease-in-out infinite; }
+.card-inner h1 { font-family:'Playfair Display', serif; font-size:42px; color:#5F7A6A; }
+.card-inner p { margin-top:15px; letter-spacing:2px; color:#8FAF9A; }
+@keyframes float { 50% { transform: translateY(-10px); } }
+
+/* Content */
+#content { opacity:0; transition:opacity 1.5s ease; }
+
+/* Fade-in */
+.section, .hero { opacity:0; transform:translateY(20px); animation:fadeInUp 1s forwards; }
+@keyframes fadeInUp { to { opacity:1; transform:translateY(0); } }
+
+/* Hero */
+.hero { height:100vh; background:white; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+.hero h1 { font-family:'Playfair Display', serif; font-size:60px; color:#5F7A6A; }
+.subtitle { letter-spacing:4px; color:#8FAF9A; }
+
+/* Sections */
+.section { padding:80px 20%; text-align:center; }
+.light { background:white; }
+h2 { font-family:'Playfair Display', serif; font-size:36px; color:#5F7A6A; margin-bottom:30px; }
+.story-image { max-width:380px; width:100%; border-radius:20px; margin:30px 0; }
+.details { font-size:18px; margin:15px 0; }
+.italic { font-style:italic; }
+.bold { font-weight:600; }
+
+/* RSVP Form */
+#rsvp-form { max-width:400px; margin:auto; display:flex; flex-direction:column; gap:15px; }
+#rsvp-form input, #rsvp-form button { padding:14px; border-radius:8px; font-size:16px; }
+#rsvp-form button { border:none; background:#5F7A6A; color:white; cursor:pointer; }
+#rsvp-form button:hover { background:#8FAF9A; }
+.confirmation { margin-top:20px; color:#5F7A6A; font-weight:600; }
+
+/* Countdown */
+.countdown-section { text-align:center; margin:60px 0; padding:50px 0; background: linear-gradient(135deg, #F4EFEA, #D4E3D2); border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);}
+.countdown-section h2 { font-family: 'Playfair Display', serif; font-size: 36px; color: #5F7A6A; margin-bottom: 15px; }
+.countdown-section p { color:#8FAF9A; margin-bottom: 30px; font-size:18px; }
+#countdown span { font-weight:700; color:#FF6B81; }
+
+/* Footer */
+footer { background:#5F7A6A; color:white; text-align:center; padding:40px; }
+.names { font-family:'Playfair Display', serif; font-size:24px; }
+
+/* Mobile */
+@media(max-width:768px){ .section{padding:60px 8%;} .hero h1{font-size:42px;} }

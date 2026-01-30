@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nancy & Ghady</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Petals & Hearts container -->
+<div id="petals-container"></div>
+
+<!-- Opening Card -->
+<div id="card">
+    <div class="card-inner">
+        <h1>Nancy & Ghady</h1>
+        <p>Tap to open our story ✨</p>
+    </div>
+</div>
+
+<!-- Background Music -->
+<audio id="music" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<div id="content">
+
+    <section class="hero">
+        <h1>Nancy & Ghady</h1>
+        <p class="subtitle">ARE GETTING MARRIED</p>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="section countdown-section">
+        <h2>⏳ The Big Day is Coming!</h2>
+        <p>Scroll down and see our story unfold 💚✨</p>
+        <div id="countdown">
+            <span id="days">0</span> Days
+            <span id="hours">0</span> Hours
+            <span id="minutes">0</span> Minutes
+            <span id="seconds">0</span> Seconds
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Our Story</h2>
+        <img src="assets/couple.jpg" class="story-image" alt="Nancy & Ghady">
+        <p>We met at university, each in a different club and always on opposite sides. It started with a phone call after an election — Nancy won, Ghady lost.</p>
+        <p>Later, we randomly sat next to each other in class. Attendance revealed our names — it all clicked!</p>
+        <p>Friendship first. With time, Ghady took steps to get closer while Nancy had no clue.</p>
+        <p>Now… we’re together, engaged, and ready to start our life together 🤍</p>
+    </section>
+
+    <section class="section light">
+        <h2>Wedding Details</h2>
+        <p class="details"><strong>09 September 2026</strong></p>
+        <p class="details"><span>⏰</span> 5:30 PM – Ceremony<br>
+        <span>⏰</span> 6:30 PM – Dinner</p>
+        <p class="details"><span>📍</span> <a href="https://goo.gl/maps/xyz" target="_blank">Swiss Hotel – Çeşme, Turkey</a></p>
+        <p class="details italic">Are you ready to fly together on a plane filled with love? ✈️💚</p>
+    </section>
+
+    <!-- RSVP Custom Form -->
+    <section class="section">
+        <h2>Reservation</h2>
+        <p>Please confirm your attendance 💚</p>
+
+        <form id="rsvp-form">
+  <input type="text" name="fullName" placeholder="Full Name" required>
+  <input type="text" name="phone" placeholder="Phone Number" required>
+  <button type="submit">Confirm</button>
+</form>
+<p class="confirmation" id="confirmation"></p>
+
+    </section>
+
+    <section class="section light">
+        <h2>Wedding Registry</h2>
+        <p>Your presence is the greatest gift 🤍<br>But if you feel inclined, a wedding list is available.</p>
+        <p class="bold">Whish Account<br>71 997 696</p>
+    </section>
+
+    <footer>
+        <p>Thank You</p>
+        <p class="names">Nancy & Ghady</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
